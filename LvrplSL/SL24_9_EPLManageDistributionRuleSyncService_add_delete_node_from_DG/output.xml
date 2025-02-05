@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-02-05T13:51:50.815683" rpa="false" schemaversion="5">
+<suite id="s1" name="EPLManageDistRuleSyncService" source="C:\EPL-Liverpool-SL\LvrplSL\SL24_9_EPLManageDistributionRuleSyncService_add_delete_node_from_DG\EPLManageDistRuleSyncService">
+<suite id="s1-s1" name="TC001" source="C:\EPL-Liverpool-SL\LvrplSL\SL24_9_EPLManageDistributionRuleSyncService_add_delete_node_from_DG\EPLManageDistRuleSyncService\TC001.robot">
+<test id="s1-s1-t1" name="Add Node From DG EPL_RTAM_ALL_DG" line="11">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-05T13:51:52.834233" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.834061" elapsed="0.000200"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:52.834639" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E8B142C440&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-05T13:51:52.834368" elapsed="0.000447"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-02-05T13:51:52.833333" elapsed="0.001552"/>
+</kw>
+<kw name="Add Node From DG" owner="PrepareKeyword">
+<kw name="Generic Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-02-05T13:51:52.840282" level="INFO">${JsonData} = &lt;DistributionRule DistributionRuleId="EPL_RTAM_ALL_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="1" ItemId=""  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt;</msg>
+<var>${JsonData}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scenario}</arg>
+<status status="PASS" start="2025-02-05T13:51:52.835533" elapsed="0.004781"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:52.880491" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '187'} 
+ body=&lt;DistributionRule DistributionRuleId="EPL_RTAM_ALL_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="1" ItemId=""  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt; 
+ </msg>
+<msg time="2025-02-05T13:51:52.880566" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '188', 'Date': 'Wed, 05 Feb 2025 08:21:52 GMT'} 
+ body={"ItemShipNodes":{"ItemShipNode":[{"OwnerKey":"Liverpool","ShipnodeKey":"1","DistributionRuleId":"EPL_RTAM_ALL_DG","Operation":"","ItemId":"ALL"}]},"DGType":"RTAM_GLOBAL_LEVEL","OwnerKey":"Liverpool","ItemGroupCode":"PROD","Purpose":"SOURCING","DistributionRuleId":"EPL_RTAM_ALL_DG"} 
+ </msg>
+<msg time="2025-02-05T13:51:52.880660" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLManageDistRuleSyncService}</arg>
+<arg>data=${JsonData}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.840479" elapsed="0.040198"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-05T13:51:52.880743" elapsed="0.000042"/>
+</return>
+<msg time="2025-02-05T13:51:52.880902" level="INFO">${json_data} = &lt;Response [200]&gt;</msg>
+<var>${json_data}</var>
+<arg>${CUR_DIR}</arg>
+<arg>TC001</arg>
+<status status="PASS" start="2025-02-05T13:51:52.835281" elapsed="0.045636"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${json_data.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.881288" elapsed="0.000813"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.882319" elapsed="0.000467"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:52.883450" level="INFO">${ItemShipNodes} = {'ItemShipNode': [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': '', 'ItemId': 'ALL'}]}</msg>
+<var>${ItemShipNodes}</var>
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.883033" elapsed="0.000440"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:52.883924" level="INFO">${ItemShipNode} = [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': '', 'ItemId': 'ALL'}]</msg>
+<var>${ItemShipNode}</var>
+<arg>${ItemShipNodes}</arg>
+<arg>ItemShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.883762" elapsed="0.000187"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-05T13:51:52.884270" level="INFO">${first_item} = {'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': '', 'ItemId': 'ALL'}</msg>
+<var>${first_item}</var>
+<arg>${item_ship_node}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.884122" elapsed="0.000167"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:52.884950" level="INFO">${distribution_rule_id} = EPL_RTAM_ALL_DG</msg>
+<var>${distribution_rule_id}</var>
+<arg>${first_item}</arg>
+<arg>DistributionRuleId</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.884820" elapsed="0.000155"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-05T13:51:52.885608" level="INFO">EPL_RTAM_ALL_DG</msg>
+<arg>${distribution_rule_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.885332" elapsed="0.000319"/>
+</kw>
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2025-02-05T13:51:52.886152" level="INFO">Set test message to:
+Node is added to DG</msg>
+<arg>Node is added to DG</arg>
+<arg>${distribution_rule_id}</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.885970" elapsed="0.000224"/>
+</kw>
+<doc>Add Node From DG</doc>
+<tag>EPLManageDistRuleSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-02-05T13:51:52.832524" elapsed="0.053868">Node is added to DG</status>
+</test>
+<test id="s1-s1-t2" name="Add Node From DG Purpose blank EPL_RTAM_ALL_DG" line="28">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-05T13:51:52.888034" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.887855" elapsed="0.000208"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:52.888525" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E8B143C910&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-05T13:51:52.888197" elapsed="0.000499"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-02-05T13:51:52.887328" elapsed="0.001446"/>
+</kw>
+<kw name="Add Node From DG" owner="PrepareKeyword">
+<kw name="Generic Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-02-05T13:51:52.889896" level="INFO">${JsonData} = &lt;DistributionRule DistributionRuleId="EPL_RTAM_ALL_DG" Purpose=""&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="1" ItemId=""  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt;</msg>
+<var>${JsonData}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scenario}</arg>
+<status status="PASS" start="2025-02-05T13:51:52.889356" elapsed="0.000572"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:52.912292" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '183'} 
+ body=&lt;DistributionRule DistributionRuleId="EPL_RTAM_ALL_DG" Purpose=""&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="1" ItemId=""  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt; 
+ </msg>
+<msg time="2025-02-05T13:51:52.912545" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '169', 'Date': 'Wed, 05 Feb 2025 08:21:52 GMT'} 
+ body={"ItemShipNodes":{"ItemShipNode":[{"OwnerKey":"Liverpool","ShipnodeKey":"1","DistributionRuleId":"EPL_RTAM_ALL_DG","Operation":"","ItemId":"ALL"}]},"OwnerKey":"Liverpool","ItemGroupCode":"PROD","Purpose":"SOURCING","DistributionRuleId":"EPL_RTAM_ALL_DG"} 
+ </msg>
+<msg time="2025-02-05T13:51:52.912705" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLManageDistRuleSyncService}</arg>
+<arg>data=${JsonData}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.890063" elapsed="0.022671"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-05T13:51:52.912831" elapsed="0.000063"/>
+</return>
+<msg time="2025-02-05T13:51:52.913062" level="INFO">${json_data} = &lt;Response [200]&gt;</msg>
+<var>${json_data}</var>
+<arg>${CUR_DIR}</arg>
+<arg>TC002</arg>
+<status status="PASS" start="2025-02-05T13:51:52.889043" elapsed="0.024049"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${json_data.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.913448" elapsed="0.001132"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.914905" elapsed="0.000703"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:52.916611" level="INFO">${ItemShipNodes} = {'ItemShipNode': [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': '', 'ItemId': 'ALL'}]}</msg>
+<var>${ItemShipNodes}</var>
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.915843" elapsed="0.000800"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:52.917166" level="INFO">${ItemShipNode} = [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': '', 'ItemId': 'ALL'}]</msg>
+<var>${ItemShipNode}</var>
+<arg>${ItemShipNodes}</arg>
+<arg>ItemShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.916960" elapsed="0.000226"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-05T13:51:52.917484" level="INFO">${first_item} = {'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': '', 'ItemId': 'ALL'}</msg>
+<var>${first_item}</var>
+<arg>${item_ship_node}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.917366" elapsed="0.000135"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:52.917840" level="INFO">${distribution_rule_id} = EPL_RTAM_ALL_DG</msg>
+<var>${distribution_rule_id}</var>
+<arg>${first_item}</arg>
+<arg>DistributionRuleId</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.917679" elapsed="0.000186"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-05T13:51:52.918270" level="INFO">EPL_RTAM_ALL_DG</msg>
+<arg>${distribution_rule_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.918132" elapsed="0.000179"/>
+</kw>
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2025-02-05T13:51:52.918769" level="INFO">Set test message to:
+Node is added to DG</msg>
+<arg>Node is added to DG</arg>
+<arg>${distribution_rule_id}</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.918588" elapsed="0.000224"/>
+</kw>
+<doc>Add Node From DG Purpose blank</doc>
+<tag>EPLManageDistRuleSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-02-05T13:51:52.886792" elapsed="0.032218">Node is added to DG</status>
+</test>
+<test id="s1-s1-t3" name="Add Node From DG Adding Item Id EPL_RTAM_ALL_DG" line="45">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-05T13:51:52.920460" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.920320" elapsed="0.000166"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:52.920835" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E8B143DBD0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-05T13:51:52.920580" elapsed="0.000626"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-02-05T13:51:52.920027" elapsed="0.001238"/>
+</kw>
+<kw name="Add Node From DG" owner="PrepareKeyword">
+<kw name="Generic Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-02-05T13:51:52.922447" level="INFO">${JsonData} = &lt;DistributionRule DistributionRuleId="EPL_RTAM_ALL_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRul...</msg>
+<var>${JsonData}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scenario}</arg>
+<status status="PASS" start="2025-02-05T13:51:52.921951" elapsed="0.000521"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.020197" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '202'} 
+ body=&lt;DistributionRule DistributionRuleId="EPL_RTAM_ALL_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt; 
+ </msg>
+<msg time="2025-02-05T13:51:53.020281" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '237', 'Date': 'Wed, 05 Feb 2025 08:21:52 GMT'} 
+ body={"ItemShipNodes":{"ItemShipNode":[{"EffectiveEndDate":"2500-01-01","OwnerKey":"Liverpool","ShipnodeKey":"33","DistributionRuleId":"EPL_RTAM_ALL_DG","Operation":"","EffectiveStartDate":"1900-01-01","ItemId":"20250131172002"}]},"DGType":"RTAM_GLOBAL_LEVEL","OwnerKey":"Liverpool","ItemGroupCode":"PROD","Purpose":"SOURCING","DistributionRuleId":"EPL_RTAM_ALL_DG"} 
+ </msg>
+<msg time="2025-02-05T13:51:53.020383" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLManageDistRuleSyncService}</arg>
+<arg>data=${JsonData}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-05T13:51:52.922570" elapsed="0.097834"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-05T13:51:53.020488" elapsed="0.000039"/>
+</return>
+<msg time="2025-02-05T13:51:53.020642" level="INFO">${json_data} = &lt;Response [200]&gt;</msg>
+<var>${json_data}</var>
+<arg>${CUR_DIR}</arg>
+<arg>TC003</arg>
+<status status="PASS" start="2025-02-05T13:51:52.921668" elapsed="0.098993"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${json_data.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.021028" elapsed="0.000687"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.021935" elapsed="0.000435"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.022992" level="INFO">${ItemShipNodes} = {'ItemShipNode': [{'EffectiveEndDate': '2500-01-01', 'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': '', 'EffectiveStartDate': '1900-01-01', 'ItemId...</msg>
+<var>${ItemShipNodes}</var>
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.022593" elapsed="0.000418"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.023381" level="INFO">${ItemShipNode} = [{'EffectiveEndDate': '2500-01-01', 'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': '', 'EffectiveStartDate': '1900-01-01', 'ItemId': '2025013117200...</msg>
+<var>${ItemShipNode}</var>
+<arg>${ItemShipNodes}</arg>
+<arg>ItemShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.023269" elapsed="0.000144"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-05T13:51:53.023708" level="INFO">${first_item} = {'EffectiveEndDate': '2500-01-01', 'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': '', 'EffectiveStartDate': '1900-01-01', 'ItemId': '20250131172002...</msg>
+<var>${first_item}</var>
+<arg>${item_ship_node}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.023609" elapsed="0.000114"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.023977" level="INFO">${distribution_rule_id} = EPL_RTAM_ALL_DG</msg>
+<var>${distribution_rule_id}</var>
+<arg>${first_item}</arg>
+<arg>DistributionRuleId</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.023886" elapsed="0.000105"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.024272" level="INFO">EPL_RTAM_ALL_DG</msg>
+<arg>${distribution_rule_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.024201" elapsed="0.000095"/>
+</kw>
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.024702" level="INFO">Set test message to:
+Node is added to DG</msg>
+<arg>Node is added to DG</arg>
+<arg>${distribution_rule_id}</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.024607" elapsed="0.000119"/>
+</kw>
+<doc>Add Node From DG Adding Item Id</doc>
+<tag>EPLManageDistRuleSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-02-05T13:51:52.919500" elapsed="0.105412">Node is added to DG</status>
+</test>
+<test id="s1-s1-t4" name="Remove Node From DG Operation Delete EPL_RTAM_ALL_DG" line="62">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.026022" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.025928" elapsed="0.000109"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.026325" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E8B142A9E0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-05T13:51:53.026123" elapsed="0.000301"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-02-05T13:51:53.025772" elapsed="0.000756"/>
+</kw>
+<kw name="Add Node From DG" owner="PrepareKeyword">
+<kw name="Generic Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-02-05T13:51:53.027233" level="INFO">${JsonData} = &lt;DistributionRule DistributionRuleId="EPL_RTAM_ALL_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation="Delete"/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/Distribut...</msg>
+<var>${JsonData}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scenario}</arg>
+<status status="PASS" start="2025-02-05T13:51:53.026917" elapsed="0.000336"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.089744" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '208'} 
+ body=&lt;DistributionRule DistributionRuleId="EPL_RTAM_ALL_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation="Delete"/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt; 
+ </msg>
+<msg time="2025-02-05T13:51:53.089816" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '205', 'Date': 'Wed, 05 Feb 2025 08:21:52 GMT'} 
+ body={"ItemShipNodes":{"ItemShipNode":[{"OwnerKey":"Liverpool","ShipnodeKey":"33","DistributionRuleId":"EPL_RTAM_ALL_DG","Operation":"Delete","ItemId":"20250131172002"}]},"DGType":"RTAM_GLOBAL_LEVEL","OwnerKey":"Liverpool","ItemGroupCode":"PROD","Purpose":"SOURCING","DistributionRuleId":"EPL_RTAM_ALL_DG"} 
+ </msg>
+<msg time="2025-02-05T13:51:53.089902" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLManageDistRuleSyncService}</arg>
+<arg>data=${JsonData}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.027334" elapsed="0.062585"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-05T13:51:53.089980" elapsed="0.000031"/>
+</return>
+<msg time="2025-02-05T13:51:53.090113" level="INFO">${json_data} = &lt;Response [200]&gt;</msg>
+<var>${json_data}</var>
+<arg>${CUR_DIR}</arg>
+<arg>TC004</arg>
+<status status="PASS" start="2025-02-05T13:51:53.026708" elapsed="0.063420"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${json_data.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.090393" elapsed="0.000659"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.091263" elapsed="0.000503"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.092364" level="INFO">${ItemShipNodes} = {'ItemShipNode': [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': 'Delete', 'ItemId': '20250131172002'}]}</msg>
+<var>${ItemShipNodes}</var>
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.091954" elapsed="0.000429"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.092676" level="INFO">${ItemShipNode} = [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': 'Delete', 'ItemId': '20250131172002'}]</msg>
+<var>${ItemShipNode}</var>
+<arg>${ItemShipNodes}</arg>
+<arg>ItemShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.092564" elapsed="0.000127"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-05T13:51:53.092898" level="INFO">${first_item} = {'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_RTAM_ALL_DG', 'Operation': 'Delete', 'ItemId': '20250131172002'}</msg>
+<var>${first_item}</var>
+<arg>${item_ship_node}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.092805" elapsed="0.000109"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.093114" level="INFO">${distribution_rule_id} = EPL_RTAM_ALL_DG</msg>
+<var>${distribution_rule_id}</var>
+<arg>${first_item}</arg>
+<arg>DistributionRuleId</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.093022" elapsed="0.000106"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.093308" level="INFO">EPL_RTAM_ALL_DG</msg>
+<arg>${distribution_rule_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.093234" elapsed="0.000097"/>
+</kw>
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.093580" level="INFO">Set test message to:
+Node is removed from DG</msg>
+<arg>Node is removed from DG</arg>
+<arg>${distribution_rule_id}</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.093480" elapsed="0.000126"/>
+</kw>
+<doc>Remove Node From DG Operation Delete</doc>
+<tag>EPLManageDistRuleSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-02-05T13:51:53.025432" elapsed="0.068275">Node is removed from DG</status>
+</test>
+<test id="s1-s1-t5" name="Exception scenario DistributionRuleId passed is empty" line="79">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.094579" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.094468" elapsed="0.000137"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.094905" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E8B142BA80&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-05T13:51:53.094675" elapsed="0.000360"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-02-05T13:51:53.094305" elapsed="0.000780"/>
+</kw>
+<kw name="Add Node From DG" owner="PrepareKeyword">
+<kw name="Generic Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-02-05T13:51:53.095805" level="INFO">${JsonData} = &lt;DistributionRule DistributionRuleId="" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation="Delete"/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt;</msg>
+<var>${JsonData}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scenario}</arg>
+<status status="PASS" start="2025-02-05T13:51:53.095423" elapsed="0.000483"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.208192" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '193'} 
+ body=&lt;DistributionRule DistributionRuleId="" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation="Delete"/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt; 
+ </msg>
+<msg time="2025-02-05T13:51:53.208303" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ status=400, reason=Bad Request 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '105', 'Connection': 'Close', 'Date': 'Wed, 05 Feb 2025 08:21:52 GMT'} 
+ body={"errors":[{"ErrorDescription":"Error description not available","httpcode":400,"ErrorCode":"Unknown Error"}]} 
+ </msg>
+<msg time="2025-02-05T13:51:53.208492" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLManageDistRuleSyncService}</arg>
+<arg>data=${JsonData}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-02-05T13:51:53.096017" elapsed="0.115165">HTTPError: 400 Client Error: Bad Request for url: http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService</status>
+</kw>
+<return>
+<value>${response}</value>
+<status status="NOT RUN" start="2025-02-05T13:51:53.211340" elapsed="0.000026"/>
+</return>
+<var>${response}</var>
+<arg>${CUR_DIR}</arg>
+<arg>TC005</arg>
+<status status="FAIL" start="2025-02-05T13:51:53.095237" elapsed="0.116291">HTTPError: 400 Client Error: Bad Request for url: http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService</status>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${response.status_code}' == '400'</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2025-02-05T13:51:53.211963" elapsed="0.000030"/>
+</kw>
+<kw name="Extract Error Description" owner="PrepareKeyword">
+<arg>${response}</arg>
+<status status="NOT RUN" start="2025-02-05T13:51:53.212301" elapsed="0.000028"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${response.status_code}' != '400'</arg>
+<arg>Log</arg>
+<arg>No error, status code: ${response.status_code}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2025-02-05T13:51:53.212553" elapsed="0.000021"/>
+</kw>
+<doc>Exception scenario DistributionRuleId passed is empty</doc>
+<tag>EPLManageDistRuleSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="FAIL" start="2025-02-05T13:51:53.093969" elapsed="0.118861">HTTPError: 400 Client Error: Bad Request for url: http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService</status>
+</test>
+<test id="s1-s1-t6" name="Add Node From DG EPL_LP_RTAM_NODE_DG" line="88">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.214406" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.214209" elapsed="0.000226"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.214918" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E8B14217F0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-05T13:51:53.214570" elapsed="0.000521"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-02-05T13:51:53.213877" elapsed="0.001293"/>
+</kw>
+<kw name="Add Node From DG" owner="PrepareKeyword">
+<kw name="Generic Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-02-05T13:51:53.216155" level="INFO">${JsonData} = &lt;DistributionRule DistributionRuleId="EPL_LP_RTAM_NODE_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="1" ItemId=""  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt;</msg>
+<var>${JsonData}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scenario}</arg>
+<status status="PASS" start="2025-02-05T13:51:53.215726" elapsed="0.000468"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.264329" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '191'} 
+ body=&lt;DistributionRule DistributionRuleId="EPL_LP_RTAM_NODE_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="1" ItemId=""  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt; 
+ </msg>
+<msg time="2025-02-05T13:51:53.264463" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '187', 'Date': 'Wed, 05 Feb 2025 08:21:52 GMT'} 
+ body={"ItemShipNodes":{"ItemShipNode":[{"OwnerKey":"Liverpool","ShipnodeKey":"1","DistributionRuleId":"EPL_LP_RTAM_NODE_DG","Operation":"","ItemId":"ALL"}]},"DGType":"RTAM_NODE_LEVEL","OwnerKey":"Liverpool","ItemGroupCode":"PROD","Purpose":"SOURCING","DistributionRuleId":"EPL_LP_RTAM_NODE_DG"} 
+ </msg>
+<msg time="2025-02-05T13:51:53.264594" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLManageDistRuleSyncService}</arg>
+<arg>data=${JsonData}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.216339" elapsed="0.048279"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-05T13:51:53.264700" elapsed="0.000042"/>
+</return>
+<msg time="2025-02-05T13:51:53.264942" level="INFO">${json_data} = &lt;Response [200]&gt;</msg>
+<var>${json_data}</var>
+<arg>${CUR_DIR}</arg>
+<arg>TC006</arg>
+<status status="PASS" start="2025-02-05T13:51:53.215412" elapsed="0.049553"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${json_data.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.265302" elapsed="0.001142"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.266781" elapsed="0.000955"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.268893" level="INFO">${ItemShipNodes} = {'ItemShipNode': [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': '', 'ItemId': 'ALL'}]}</msg>
+<var>${ItemShipNodes}</var>
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.268046" elapsed="0.000880"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.269362" level="INFO">${ItemShipNode} = [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': '', 'ItemId': 'ALL'}]</msg>
+<var>${ItemShipNode}</var>
+<arg>${ItemShipNodes}</arg>
+<arg>ItemShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.269166" elapsed="0.000224"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-05T13:51:53.269792" level="INFO">${first_item} = {'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': '', 'ItemId': 'ALL'}</msg>
+<var>${first_item}</var>
+<arg>${item_ship_node}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.269629" elapsed="0.000191"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.270210" level="INFO">${distribution_rule_id} = EPL_LP_RTAM_NODE_DG</msg>
+<var>${distribution_rule_id}</var>
+<arg>${first_item}</arg>
+<arg>DistributionRuleId</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.270051" elapsed="0.000187"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.270558" level="INFO">EPL_LP_RTAM_NODE_DG</msg>
+<arg>${distribution_rule_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.270433" elapsed="0.000167"/>
+</kw>
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.271012" level="INFO">Set test message to:
+Node is added to DG</msg>
+<arg>Node is added to DG</arg>
+<arg>${distribution_rule_id}</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.270861" elapsed="0.000194"/>
+</kw>
+<doc>Add Node From DG</doc>
+<tag>EPLManageDistRuleSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-02-05T13:51:53.213347" elapsed="0.057910">Node is added to DG</status>
+</test>
+<test id="s1-s1-t7" name="Add Node From DG Purpose blank EPL_LP_RTAM_NODE_DG" line="105">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.272880" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.272675" elapsed="0.000239"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.273471" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E8B138A360&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-05T13:51:53.273081" elapsed="0.000582"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-02-05T13:51:53.272348" elapsed="0.001410"/>
+</kw>
+<kw name="Add Node From DG" owner="PrepareKeyword">
+<kw name="Generic Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-02-05T13:51:53.274922" level="INFO">${JsonData} = &lt;DistributionRule DistributionRuleId="EPL_LP_RTAM_NODE_DG" Purpose=""&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="1" ItemId=""  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt;</msg>
+<var>${JsonData}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scenario}</arg>
+<status status="PASS" start="2025-02-05T13:51:53.274438" elapsed="0.000524"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.305547" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '187'} 
+ body=&lt;DistributionRule DistributionRuleId="EPL_LP_RTAM_NODE_DG" Purpose=""&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="1" ItemId=""  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt; 
+ </msg>
+<msg time="2025-02-05T13:51:53.305642" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '173', 'Date': 'Wed, 05 Feb 2025 08:21:52 GMT'} 
+ body={"ItemShipNodes":{"ItemShipNode":[{"OwnerKey":"Liverpool","ShipnodeKey":"1","DistributionRuleId":"EPL_LP_RTAM_NODE_DG","Operation":"","ItemId":"ALL"}]},"OwnerKey":"Liverpool","ItemGroupCode":"PROD","Purpose":"SOURCING","DistributionRuleId":"EPL_LP_RTAM_NODE_DG"} 
+ </msg>
+<msg time="2025-02-05T13:51:53.305791" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLManageDistRuleSyncService}</arg>
+<arg>data=${JsonData}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.275127" elapsed="0.030688"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-05T13:51:53.305911" elapsed="0.000047"/>
+</return>
+<msg time="2025-02-05T13:51:53.306117" level="INFO">${json_data} = &lt;Response [200]&gt;</msg>
+<var>${json_data}</var>
+<arg>${CUR_DIR}</arg>
+<arg>TC007</arg>
+<status status="PASS" start="2025-02-05T13:51:53.274100" elapsed="0.032038"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${json_data.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.306464" elapsed="0.000987"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.307721" elapsed="0.000790"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.314094" level="INFO">${ItemShipNodes} = {'ItemShipNode': [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': '', 'ItemId': 'ALL'}]}</msg>
+<var>${ItemShipNodes}</var>
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.313095" elapsed="0.001214"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.316167" level="INFO">${ItemShipNode} = [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': '', 'ItemId': 'ALL'}]</msg>
+<var>${ItemShipNode}</var>
+<arg>${ItemShipNodes}</arg>
+<arg>ItemShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.315911" elapsed="0.000283"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-05T13:51:53.316597" level="INFO">${first_item} = {'OwnerKey': 'Liverpool', 'ShipnodeKey': '1', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': '', 'ItemId': 'ALL'}</msg>
+<var>${first_item}</var>
+<arg>${item_ship_node}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.316440" elapsed="0.000180"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.317014" level="INFO">${distribution_rule_id} = EPL_LP_RTAM_NODE_DG</msg>
+<var>${distribution_rule_id}</var>
+<arg>${first_item}</arg>
+<arg>DistributionRuleId</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.316843" elapsed="0.000252"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.317425" level="INFO">EPL_LP_RTAM_NODE_DG</msg>
+<arg>${distribution_rule_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.317291" elapsed="0.000176"/>
+</kw>
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.317879" level="INFO">Set test message to:
+Node is added to DG</msg>
+<arg>Node is added to DG</arg>
+<arg>${distribution_rule_id}</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.317699" elapsed="0.000227"/>
+</kw>
+<doc>Add Node From DG Purpose blank</doc>
+<tag>EPLManageDistRuleSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-02-05T13:51:53.271792" elapsed="0.046343">Node is added to DG</status>
+</test>
+<test id="s1-s1-t8" name="Add Node From DG Adding Item Id EPL_LP_RTAM_NODE_DG" line="122">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.320447" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.320224" elapsed="0.000255"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.321024" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E8B138A030&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-05T13:51:53.320655" elapsed="0.000556"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-02-05T13:51:53.319622" elapsed="0.001668"/>
+</kw>
+<kw name="Add Node From DG" owner="PrepareKeyword">
+<kw name="Generic Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-02-05T13:51:53.322359" level="INFO">${JsonData} = &lt;DistributionRule DistributionRuleId="EPL_LP_RTAM_NODE_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/Distributio...</msg>
+<var>${JsonData}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scenario}</arg>
+<status status="PASS" start="2025-02-05T13:51:53.321943" elapsed="0.000452"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.479054" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '206'} 
+ body=&lt;DistributionRule DistributionRuleId="EPL_LP_RTAM_NODE_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation=""/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt; 
+ </msg>
+<msg time="2025-02-05T13:51:53.479145" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '235', 'Date': 'Wed, 05 Feb 2025 08:21:52 GMT'} 
+ body={"ItemShipNodes":{"ItemShipNode":[{"EffectiveEndDate":"2500-01-01","OwnerKey":"Liverpool","ShipnodeKey":"33","DistributionRuleId":"EPL_LP_RTAM_NODE_DG","Operation":"","EffectiveStartDate":"1900-01-01","ItemId":"20250131172002"}]},"DGType":"RTAM_NODE_LEVEL","OwnerKey":"Liverpool","ItemGroupCode":"PROD","Purpose":"SOURCING","DistributionRuleId":"EPL_LP_RTAM_NODE_DG"} 
+ </msg>
+<msg time="2025-02-05T13:51:53.479248" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLManageDistRuleSyncService}</arg>
+<arg>data=${JsonData}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.322538" elapsed="0.156730"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-05T13:51:53.479337" elapsed="0.000034"/>
+</return>
+<msg time="2025-02-05T13:51:53.479480" level="INFO">${json_data} = &lt;Response [200]&gt;</msg>
+<var>${json_data}</var>
+<arg>${CUR_DIR}</arg>
+<arg>TC008</arg>
+<status status="PASS" start="2025-02-05T13:51:53.321621" elapsed="0.157877"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${json_data.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.479857" elapsed="0.000740"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.480778" elapsed="0.000494"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.482089" level="INFO">${ItemShipNodes} = {'ItemShipNode': [{'EffectiveEndDate': '2500-01-01', 'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': '', 'EffectiveStartDate': '1900-01-01', 'It...</msg>
+<var>${ItemShipNodes}</var>
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.481576" elapsed="0.000536"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.482441" level="INFO">${ItemShipNode} = [{'EffectiveEndDate': '2500-01-01', 'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': '', 'EffectiveStartDate': '1900-01-01', 'ItemId': '202501311...</msg>
+<var>${ItemShipNode}</var>
+<arg>${ItemShipNodes}</arg>
+<arg>ItemShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.482313" elapsed="0.000203"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-05T13:51:53.482988" level="INFO">${first_item} = {'EffectiveEndDate': '2500-01-01', 'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': '', 'EffectiveStartDate': '1900-01-01', 'ItemId': '2025013117...</msg>
+<var>${first_item}</var>
+<arg>${item_ship_node}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.482782" elapsed="0.000240"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.483353" level="INFO">${distribution_rule_id} = EPL_LP_RTAM_NODE_DG</msg>
+<var>${distribution_rule_id}</var>
+<arg>${first_item}</arg>
+<arg>DistributionRuleId</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.483239" elapsed="0.000130"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.483596" level="INFO">EPL_LP_RTAM_NODE_DG</msg>
+<arg>${distribution_rule_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.483519" elapsed="0.000103"/>
+</kw>
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.483885" level="INFO">Set test message to:
+Node is added to DG</msg>
+<arg>Node is added to DG</arg>
+<arg>${distribution_rule_id}</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.483792" elapsed="0.000120"/>
+</kw>
+<doc>Add Node From DG Adding Item Id</doc>
+<tag>EPLManageDistRuleSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-02-05T13:51:53.319064" elapsed="0.165009">Node is added to DG</status>
+</test>
+<test id="s1-s1-t9" name="Remove Node From DG Operation Delete EPL_LP_RTAM_NODE_DG" line="139">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.485645" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.485520" elapsed="0.000144"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.485949" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E8B145C950&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-05T13:51:53.485755" elapsed="0.000294"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-02-05T13:51:53.485321" elapsed="0.000772"/>
+</kw>
+<kw name="Add Node From DG" owner="PrepareKeyword">
+<kw name="Generic Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-02-05T13:51:53.486838" level="INFO">${JsonData} = &lt;DistributionRule DistributionRuleId="EPL_LP_RTAM_NODE_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation="Delete"/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/Distr...</msg>
+<var>${JsonData}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scenario}</arg>
+<status status="PASS" start="2025-02-05T13:51:53.486535" elapsed="0.000324"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-05T13:51:53.561700" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '212'} 
+ body=&lt;DistributionRule DistributionRuleId="EPL_LP_RTAM_NODE_DG" Purpose="RTAM"&gt;
+	 &lt;ItemShipNodes&gt;
+	 	&lt;ItemShipNode ShipnodeKey="33" ItemId="20250131172002"  Operation="Delete"/&gt;
+	 &lt;/ItemShipNodes&gt;
+	&lt;/DistributionRule&gt; 
+ </msg>
+<msg time="2025-02-05T13:51:53.561767" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLManageDistRuleSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '204', 'Date': 'Wed, 05 Feb 2025 08:21:53 GMT'} 
+ body={"ItemShipNodes":{"ItemShipNode":[{"OwnerKey":"Liverpool","ShipnodeKey":"33","DistributionRuleId":"EPL_LP_RTAM_NODE_DG","Operation":"Delete","ItemId":"20250131172002"}]},"DGType":"RTAM_NODE_LEVEL","OwnerKey":"Liverpool","ItemGroupCode":"PROD","Purpose":"SOURCING","DistributionRuleId":"EPL_LP_RTAM_NODE_DG"} 
+ </msg>
+<msg time="2025-02-05T13:51:53.561851" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLManageDistRuleSyncService}</arg>
+<arg>data=${JsonData}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.486941" elapsed="0.074926"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-05T13:51:53.561923" elapsed="0.000030"/>
+</return>
+<msg time="2025-02-05T13:51:53.562046" level="INFO">${json_data} = &lt;Response [200]&gt;</msg>
+<var>${json_data}</var>
+<arg>${CUR_DIR}</arg>
+<arg>TC009</arg>
+<status status="PASS" start="2025-02-05T13:51:53.486367" elapsed="0.075694"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${json_data.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.562358" elapsed="0.000534"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.563030" elapsed="0.000401"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.564031" level="INFO">${ItemShipNodes} = {'ItemShipNode': [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': 'Delete', 'ItemId': '20250131172002'}]}</msg>
+<var>${ItemShipNodes}</var>
+<arg>${json_data.json()}</arg>
+<arg>ItemShipNodes</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.563647" elapsed="0.000401"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.564380" level="INFO">${ItemShipNode} = [{'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': 'Delete', 'ItemId': '20250131172002'}]</msg>
+<var>${ItemShipNode}</var>
+<arg>${ItemShipNodes}</arg>
+<arg>ItemShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.564278" elapsed="0.000125"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-02-05T13:51:53.564629" level="INFO">${first_item} = {'OwnerKey': 'Liverpool', 'ShipnodeKey': '33', 'DistributionRuleId': 'EPL_LP_RTAM_NODE_DG', 'Operation': 'Delete', 'ItemId': '20250131172002'}</msg>
+<var>${first_item}</var>
+<arg>${item_ship_node}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.564536" elapsed="0.000154"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-02-05T13:51:53.565055" level="INFO">${distribution_rule_id} = EPL_LP_RTAM_NODE_DG</msg>
+<var>${distribution_rule_id}</var>
+<arg>${first_item}</arg>
+<arg>DistributionRuleId</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.564954" elapsed="0.000115"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.565339" level="INFO">EPL_LP_RTAM_NODE_DG</msg>
+<arg>${distribution_rule_id}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.565268" elapsed="0.000095"/>
+</kw>
+<kw name="Set Test Message" owner="BuiltIn">
+<msg time="2025-02-05T13:51:53.565838" level="INFO">Set test message to:
+Node is removed from DG</msg>
+<arg>Node is removed from DG</arg>
+<arg>${distribution_rule_id}</arg>
+<doc>Sets message for the current test case.</doc>
+<status status="PASS" start="2025-02-05T13:51:53.565746" elapsed="0.000120"/>
+</kw>
+<doc>Remove Node From DG Operation Delete</doc>
+<tag>EPLManageDistRuleSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-02-05T13:51:53.484839" elapsed="0.081227">Node is removed from DG</status>
+</test>
+<status status="FAIL" start="2025-02-05T13:51:50.846298" elapsed="2.720502"/>
+</suite>
+<status status="FAIL" start="2025-02-05T13:51:50.817394" elapsed="2.750293"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="8" fail="1" skip="0">EPLManageDistRuleSyncService</stat>
+<stat pass="8" fail="1" skip="0">REGRESSION</stat>
+</tag>
+<suite>
+<stat pass="8" fail="1" skip="0" id="s1" name="EPLManageDistRuleSyncService">EPLManageDistRuleSyncService</stat>
+<stat pass="8" fail="1" skip="0" id="s1-s1" name="TC001">EPLManageDistRuleSyncService.TC001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,25 @@
+<Order AllocationRuleID="FWD_RULES" CustomerEMailID="ISAVELA0102@GMAIL.COM" CustomerFirstName="MARIA ISABEL  VELAZCO CRUZ" CustomerLastName=" " CustomerPONo="" CustomerPhoneNo="222 03888534" CustomerZipCode="98047" DeliveryCode="" Division="" DocumentType="0001" EnterpriseCode="Liverpool" HasChainedLines="" OrderDate="2025-01-09T03:11:05-06:00"  OrderName="1001" OrderNo="$OrderNo" OrderType="Personal">
+                    <OrderLines>
+                        <OrderLine DeliveryMethod="SHP" FulfillmentType="Liverpool_Deliver_By_Parcel" MaxLineStatus="1300" MinLineStatus="1300" OrderedQty="10" PrimeLineNo="1" SubLineNo="1">
+                            <Extn/>
+                            <Item ItemDesc="FAMOSA NANCY BAIL" ItemID="$ItemID" ProductClass="" UnitOfMeasure="UN"/>
+                            <LinePriceInfo IsPriceLocked="Y" ListPrice="0.00" UnitPrice="899.00"/>
+                            <References/>
+                            <OrderHoldTypes/>
+                            <LineCharges/>
+                            <LineTaxes/>
+                            <OrderStatuses>
+                                <OrderStatus Status="1300" StatusQty="10" TotalQuantity="10"/>
+                            </OrderStatuses>
+                        </OrderLine>
+                    </OrderLines>
+                    <PersonInfoShipTo AddressLine1="AVENIDA 33 PONIENTE" AddressLine2="2305" AddressLine3="" AddressLine4="BENITO JUAREZ" AddressLine5="PUEBLA" AddressLine6="" City="Tultitlan" Country="MX" DayPhone="222 03888534" EMailID="ISAVELA0102@GMAIL.COM" FirstName="MARIA ISABEL  VELAZCO CRUZ" LastName="" MiddleName="" MobilePhone="" State="Estado de Mexico" ZipCode="98047"/>
+                    <PersonInfoBillTo AddressLine1="AVENIDA 33 PONIENTE" AddressLine2="2305" AddressLine3="" AddressLine4="BENITO JUAREZ" AddressLine5="PUEBLA" AddressLine6="" City="Tultitlan" Country="MX" DayPhone="222 03888534" EMailID="ISAVELA0102@GMAIL.COM" FirstName="MARIA ISABEL  VELAZCO CRUZ" LastName="" MiddleName="" MobilePhone="" State="Estado de Mexico" ZipCode="98047"/>
+                    <PersonInfoContact AddressLine1="AVENIDA 33 PONIENTE" AddressLine2="2305" AddressLine3="" AddressLine4="BENITO JUAREZ" AddressLine5="PUEBLA" AddressLine6="" City="Tultitlan" Country="MX" DayPhone="222 03888534" EMailID="ISAVELA0102@GMAIL.COM" FirstName="MARIA ISABEL  VELAZCO CRUZ" LastName="" MiddleName="" MobilePhone="" State="Estado de Mexico" ZipCode="98047"/>
+                    <References/>
+                    <Notes NumberOfNotes="0"/>
+                    <OrderHoldTypes/>
+                    <Instructions NumberOfInstructions="0"/>
+                    <HeaderCharges/>
+                    <HeaderTaxes/>
+                </Order>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-27T18:12:48.500444" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\EPL-Liverpool-SL\LvrplSL\SL24-56_Create_Inventory_Activity_on_Safety_Factory_Load_or_Update\T003\test">
+<suite id="s1-s1" name="Tc002" source="C:\EPL-Liverpool-SL\LvrplSL\SL24-56_Create_Inventory_Activity_on_Safety_Factory_Load_or_Update\T003\test\Tc002.robot">
+<test id="s1-s1-t1" name="Create Order TC_001" line="13">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-27T18:12:50.081611" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-27T18:12:50.081326" elapsed="0.000336"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-01-27T18:12:50.082343" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x0000028A6DFC9400&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-01-27T18:12:50.081853" elapsed="0.000766"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-01-27T18:12:50.080177" elapsed="0.002561"/>
+</kw>
+<kw name="Manage Item With Dynamic Item" owner="Prepare_Xml_Content">
+<msg time="2025-01-27T18:12:50.084501" level="INFO">before mod &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="$ItemID" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt;
+after mod &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250127181250" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt;</msg>
+<msg time="2025-01-27T18:12:50.084881" level="INFO">${manageItemJson} = &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250127181250" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSu...</msg>
+<var>${manageItemJson}</var>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24-56_Create_Inventory_Activity_on_Safety_Factory_Load_or_Update\\T003\\test</arg>
+<status status="PASS" start="2025-01-27T18:12:50.083149" elapsed="0.001795"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-01-27T18:12:50.148380" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/invoke/manageItem 
+ path_url=/smcfs/restapi/invoke/manageItem 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '1022'} 
+ body=&lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250127181250" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt; 
+ </msg>
+<msg time="2025-01-27T18:12:50.148529" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/invoke/manageItem 
+ status=204, reason=No Content 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '0', 'Date': 'Mon, 27 Jan 2025 12:42:48 GMT'} 
+ body=None 
+ </msg>
+<msg time="2025-01-27T18:12:50.148703" level="INFO">${manageItemResponse} = &lt;Response [204]&gt;</msg>
+<var>${manageItemResponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${manageItem}</arg>
+<arg>data=${manageItemJson}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-27T18:12:50.085284" elapsed="0.063459"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>204</arg>
+<arg>${manageItemResponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-01-27T18:12:50.149281" elapsed="0.000354"/>
+</kw>
+<kw name="Manage Item With Dynamic Item1" owner="Prepare_Xml_Content">
+<msg time="2025-01-27T18:12:50.150875" level="INFO">after mod &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250127181250" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt;</msg>
+<msg time="2025-01-27T18:12:50.151236" level="INFO">${jsonItemId} = {'ItemList': {'Item': {'_Action': 'Manage', '_GlobalItemID': '12439482', '_ItemID': '20250127181250', '_OrganizationCode': 'Liverpool', '_UnitOfMeasure': 'UN', 'Extn': {'_ExtnActive': '01', '_ExtnItem...</msg>
+<var>${jsonItemId}</var>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24-56_Create_Inventory_Activity_on_Safety_Factory_Load_or_Update\\T003\\test</arg>
+<status status="PASS" start="2025-01-27T18:12:50.149983" elapsed="0.001292"/>
+</kw>
+<kw name="Input File" owner="Prepare_Xml_Content">
+<msg time="2025-01-27T18:12:50.152149" level="INFO">${sfLoadJson} = &lt;ItemNodeDefn FutureSafetyFactorPercentage="" ItemID="20250127181250" Node="TestNode111" OnhandSafetyFactorPercentage="" OnhandSafetyFactorQuantity="10" OrganizationCode="Liverpool" UnitOfMeasure="UN"...</msg>
+<var>${sfLoadJson}</var>
+<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24-56_Create_Inventory_Activity_on_Safety_Factory_Load_or_Update\\T003\\test</arg>
+<status status="PASS" start="2025-01-27T18:12:50.151608" elapsed="0.000580"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${sfLoadJson}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-27T18:12:50.152535" elapsed="0.000319"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-01-27T18:12:50.387324" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLSafetyFactorLoadSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLSafetyFactorLoadSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '202'} 
+ body=&lt;ItemNodeDefn FutureSafetyFactorPercentage="" ItemID="20250127181250" Node="TestNode111" OnhandSafetyFactorPercentage="" OnhandSafetyFactorQuantity="10" OrganizationCode="Liverpool" UnitOfMeasure="UN"/&gt; 
+ </msg>
+<msg time="2025-01-27T18:12:50.387509" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLSafetyFactorLoadSyncService 
+ status=400, reason=Bad Request 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '139', 'Connection': 'Close', 'Date': 'Mon, 27 Jan 2025 12:42:48 GMT'} 
+ body={"errors":[{"ErrorDescription":"YFS:Invalid Node","ErrorCode":"YFS10048","MoreInfo":{"ErrorRelatedMoreInfo":"TestNode111","ShipNode":"TestNode111"},"httpcode":400}]} 
+ </msg>
+<msg time="2025-01-27T18:12:50.387813" level="FAIL">HTTPError: 400 Client Error: Bad Request for url: http://localhost:9080/smcfs/restapi/executeFlow/EPLSafetyFactorLoadSyncService</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLSafetyFactorLoadSyncService}</arg>
+<arg>data=${sfLoadJson}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-01-27T18:12:50.153158" elapsed="0.239366">HTTPError: 400 Client Error: Bad Request for url: http://localhost:9080/smcfs/restapi/executeFlow/EPLSafetyFactorLoadSyncService</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'*************************'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.393252" elapsed="0.000042"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.394160" elapsed="0.000040"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.394724" elapsed="0.000056"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>Errors</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.395203" elapsed="0.000048"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${err_error}</var>
+<arg>${response.json()}</arg>
+<arg>Errors</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.395828" elapsed="0.000054"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${err_error}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.396205" elapsed="0.000031"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'This is error'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.396478" elapsed="0.000026"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${err_error}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.396725" elapsed="0.000024"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${response.json()}[Error]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.396969" elapsed="0.000025"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'ErrorCode----------------------------- block1'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.397648" elapsed="0.000040"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json()}[Error]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.398189" elapsed="0.000036"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'ErrorCode----------------------------- block2'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.398696" elapsed="0.000080"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'ErrorCode -------------- block3'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.399716" elapsed="0.000043"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json()}[Error][0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.400305" elapsed="0.000051"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'ErrorCode -------------- block4'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.400796" elapsed="0.000045"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json()}[Error][0][ErrorDescription]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.401285" elapsed="0.000047"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'ErrorCode -------------- block5'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.401843" elapsed="0.000044"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${error_description}</arg>
+<arg>${response.json()}[Error][0][ErrorDescription]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.402674" elapsed="0.000049"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>400</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-01-27T18:12:50.403198" elapsed="0.000043"/>
+</kw>
+<tag>EPLSafetyFactorLoadSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="FAIL" start="2025-01-27T18:12:50.078943" elapsed="0.324951">HTTPError: 400 Client Error: Bad Request for url: http://localhost:9080/smcfs/restapi/executeFlow/EPLSafetyFactorLoadSyncService</status>
+</test>
+<status status="FAIL" start="2025-01-27T18:12:48.534953" elapsed="1.871146"/>
+</suite>
+<status status="FAIL" start="2025-01-27T18:12:48.502280" elapsed="1.905776"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">EPLSafetyFactorLoadSyncService</stat>
+<stat pass="0" fail="1" skip="0">REGRESSION</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tc002">Test.Tc002</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-27T20:02:11.188557" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\EPL-Liverpool-SL\LvrplSL\SL24-56_Create_Inventory_Activity_on_Safety_Factory_Load_or_Update\SL24_49_SL24_56_TestCase_9\test">
+<suite id="s1-s1" name="Tc002" source="C:\EPL-Liverpool-SL\LvrplSL\SL24-56_Create_Inventory_Activity_on_Safety_Factory_Load_or_Update\SL24_49_SL24_56_TestCase_9\test\Tc002.robot">
+<test id="s1-s1-t1" name="Create Order TC_001" line="13">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-27T20:02:13.109173" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-27T20:02:13.108885" elapsed="0.000338"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-01-27T20:02:13.109918" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x0000021D61F79400&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-01-27T20:02:13.109429" elapsed="0.000772"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-01-27T20:02:13.107760" elapsed="0.002563"/>
+</kw>
+<kw name="Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-01-27T20:02:13.111362" level="INFO">${sfLoadJson} = &lt;ItemNodeDefn FutureSafetyFactorPercentage="" ItemID="it123" Node="104" OnhandSafetyFactorPercentage="" OnhandSafetyFactorQuantity="5" OrganizationCode="Liverpool" UnitOfMeasure="UN" Operation="Delete...</msg>
+<var>${sfLoadJson}</var>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24-56_Create_Inventory_Activity_on_Safety_Factory_Load_or_Update\\SL24_49_SL24_56_TestCase_9\\test</arg>
+<status status="PASS" start="2025-01-27T20:02:13.110800" elapsed="0.000612"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-01-27T20:02:13.262406" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLSafetyFactorLoadSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLSafetyFactorLoadSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '203'} 
+ body=&lt;ItemNodeDefn FutureSafetyFactorPercentage="" ItemID="it123" Node="104" OnhandSafetyFactorPercentage="" OnhandSafetyFactorQuantity="5" OrganizationCode="Liverpool" UnitOfMeasure="UN" Operation="Delete"/&gt; 
+ </msg>
+<msg time="2025-01-27T20:02:13.262538" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLSafetyFactorLoadSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '155', 'Date': 'Mon, 27 Jan 2025 14:32:11 GMT'} 
+ body={"OnhandSafetyFactorPercentage":"","UnitOfMeasure":"UN","Node":"104","OrganizationCode":"Liverpool","FutureSafetyFactorPercentage":"","OnhandSafetyFactorQuantity":"5","Operation":"Delete","ItemID":"it123"} 
+ </msg>
+<msg time="2025-01-27T20:02:13.262863" level="INFO">${sfLoadResponse} = &lt;Response [200]&gt;</msg>
+<var>${sfLoadResponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLSafetyFactorLoadSyncService}</arg>
+<arg>data=${sfLoadJson}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-27T20:02:13.111883" elapsed="0.151017"/>
+</kw>
+<tag>EPLSafetyFactorLoadSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-01-27T20:02:13.106400" elapsed="0.157041"/>
+</test>
+<status status="PASS" start="2025-01-27T20:02:11.244477" elapsed="2.020490"/>
+</suite>
+<status status="PASS" start="2025-01-27T20:02:11.191083" elapsed="2.075629"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">EPLSafetyFactorLoadSyncService</stat>
+<stat pass="1" fail="0" skip="0">REGRESSION</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tc002">Test.Tc002</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

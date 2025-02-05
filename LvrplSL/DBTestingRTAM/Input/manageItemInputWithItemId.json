@@ -1,0 +1,51 @@
+{
+    "ItemList": {
+        "Item": {
+            "_Action": "Manage",
+            "_GlobalItemID": "12439482",
+            "_ItemID": "20250205204648",
+            "_OrganizationCode": "Liverpool",
+            "_UnitOfMeasure": "UN",
+            "Extn": {
+                "_ExtnActive": "01",
+                "_ExtnItemSF": "Y",
+                "_ExtnItemSFDesc": "ACTIVO",
+                "_ExtnSuggestedPackage": "",
+                "_ExtnSkuPackage": ""
+            },
+            "PrimaryInformation": {
+                "_DefaultProductClass": "SL",
+                "_Description": "CHAROLA GIRATORIA AILE, 48CM, NATURAL H",
+                "_ShortDescription": "CHAROLA GIRATORIA AILE, 48CM, NATURAL H",
+                "_ExtendedDisplayDescription": "CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)",
+                "_IsDeliveryAllowed": "Y",
+                "_IsPickupAllowed": "Y",
+                "_IsShippingAllowed": "Y",
+                "_PrimaryEnterpriseCode": "Liverpool",
+                "_SerializedFlag": "N",
+                "_Status": "3000",
+                "_UnitCost": "829",
+                "_ItemType": ""
+            },
+            "ClassificationCodes": {
+                "_ECCNNo": "HAUS",
+                "_Model": "18917",
+                "_NAICSCode": "7502008630089",
+                "_NMFCClass": "152",
+                "_NMFCCode": "15204"
+            },
+            "InventoryParameters": {
+                "_ATPRule": "Liverpool_ATP",
+                "_InventoryMonitorRule": "EPL_ATP_MONITOR_RULE",
+                "_NodeLevelInventoryMonitorRule": "EPL_ATP_MONITOR_RULE"
+            },
+            "ItemAliasList": {
+                "_Reset": "Y",
+                "ItemAlias": {
+                    "_AliasName": "EAN1",
+                    "_AliasValue": "7502008630089"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+<ItemNodeDefn ItemID="$ItemID" Node="104" OrganizationCode="Liverpool" UnitOfMeasure="UN">
+	<SafetyFactorDefinitions>
+		<SafetyFactorDefinition DeliveryMethod="PICK" FutureSafetyFactorPercentage="" OnhandSafetyFactorPercentage="" OnhandSafetyFactorQuantity="15"/>
+	</SafetyFactorDefinitions>
+</ItemNodeDefn>

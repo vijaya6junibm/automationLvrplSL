@@ -1,0 +1,5 @@
+<ItemNodeDefn ItemID="it123" Node="104" OrganizationCode="Liverpool" UnitOfMeasure="UN" OnhandSafetyFactorPercentage="" OnhandSafetyFactorQuantity="5">
+	<SafetyFactorDefinitions>
+		<SafetyFactorDefinition DeliveryMethod="DEL" FutureSafetyFactorPercentage="" OnhandSafetyFactorPercentage="" OnhandSafetyFactorQuantity="20"/>
+	</SafetyFactorDefinitions>
+</ItemNodeDefn>

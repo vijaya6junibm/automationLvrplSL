@@ -1,0 +1,6 @@
+<Promise AllocationRuleID="FWD_RULES" CheckInventory="Y" EnterpriseCode="Liverpool" FulfillmentType="Fulfillment_Type_Liverpool" OrganizationCode="Liverpool" FlashPromo="Y" FlashStores="Y">
+	<ShipToAddress Country="MX" ZipCode="98047"/>
+	<PromiseLines>
+		<PromiseLine ItemID="$ItemID" LineId="1" RequiredQty="1" UnitOfMeasure="UN"/>
+	</PromiseLines>
+</Promise>

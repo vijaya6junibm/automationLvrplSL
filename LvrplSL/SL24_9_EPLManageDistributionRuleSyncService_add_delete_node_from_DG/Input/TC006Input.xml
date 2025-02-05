@@ -1,0 +1,5 @@
+<DistributionRule DistributionRuleId="EPL_LP_RTAM_NODE_DG" Purpose="RTAM">
+	 <ItemShipNodes>
+	 	<ItemShipNode ShipnodeKey="1" ItemId=""  Operation=""/>
+	 </ItemShipNodes>
+	</DistributionRule>
