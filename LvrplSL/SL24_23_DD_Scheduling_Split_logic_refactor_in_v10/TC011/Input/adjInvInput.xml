@@ -1,0 +1,6 @@
+<Items>
+	<Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="$ItemID" OrganizationCode="Liverpool" Quantity="5" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNode="103" SupplyType="ONHAND" UnitOfMeasure="UN"/>
+	<Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="$ItemID" OrganizationCode="Liverpool" Quantity="5" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNode="176" SupplyType="ONHAND" UnitOfMeasure="UN"/>
+	<Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="$ItemID" OrganizationCode="Liverpool" Quantity="3" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNode="104" SupplyType="ONHAND" UnitOfMeasure="UN"/>
+	<Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="$ItemID" OrganizationCode="Liverpool" Quantity="3" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNode="170" SupplyType="ONHAND" UnitOfMeasure="UN"/>
+</Items>
