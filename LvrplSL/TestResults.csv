@@ -5824,3 +5824,1131 @@ create order - adjust inv 40 - schedule to 40 - release - backorder from store -
                     <HeaderTaxes/>
                 </Order>
 ","{'DocumentType': '0001', 'OrderNo': '20250205204137', 'OrderHeaderKey': '202502051511421021620', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1621,20250206162137,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206162137"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206162137"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206162137', 'OrderHeaderKey': '202502061051401028370', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1621,20250206162140,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206162140"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" ShipNode=""103"">
+            <Item ItemID=""20250206162140"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206162140', 'OrderHeaderKey': '202502061051431028402', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1624,20250206162449,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206162449"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206162449"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206162449', 'OrderHeaderKey': '202502061054511028435', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1624,20250206162452,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206162452"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" ShipNode=""103"">
+            <Item ItemID=""20250206162452"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206162452', 'OrderHeaderKey': '202502061054541028467', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1624,20250206162455,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206162455"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206162455"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206162455', 'OrderHeaderKey': '202502061054571028502', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1851,20250206185132,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206185132"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206185132"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206185132', 'OrderHeaderKey': '202502061321341029558', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1851,20250206185134,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206185134"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" ShipNode=""103"">
+            <Item ItemID=""20250206185134"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206185134', 'OrderHeaderKey': '202502061321371029590', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1851,20250206185137,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206185137"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206185137"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206185137', 'OrderHeaderKey': '202502061321401029625', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1851,20250206185140,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206185140"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206185140"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206185140', 'OrderHeaderKey': '202502061321421029663', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1851,20250206185143,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206185143"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206185143"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206185143', 'OrderHeaderKey': '202502061321451029704', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1851,20250206185146,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206185146"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206185146"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206185153"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206185146', 'OrderHeaderKey': '202502061321531029744', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1852,20250206185154,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206185154"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206185154"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206185201"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206185154', 'OrderHeaderKey': '202502061322011029794', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1852,20250206185201,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206185201"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206185201"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206185208"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206185201', 'OrderHeaderKey': '202502061322091029850', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1910,20250206191006,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191006"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191006"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191006', 'OrderHeaderKey': '202502061340081030028', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1910,20250206191009,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191009"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" ShipNode=""103"">
+            <Item ItemID=""20250206191009"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191009', 'OrderHeaderKey': '202502061340111030199', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1910,20250206191011,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191011"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206191011"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191011', 'OrderHeaderKey': '202502061340141030234', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1910,20250206191014,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191014"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206191014"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191014', 'OrderHeaderKey': '202502061340171030272', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1910,20250206191017,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191017"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206191017"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191017', 'OrderHeaderKey': '202502061340191030313', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1910,20250206191020,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191020"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191020"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191027"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191020', 'OrderHeaderKey': '202502061340271030353', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1910,20250206191028,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191028"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191028"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191035"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191028', 'OrderHeaderKey': '202502061340351030403', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1910,20250206191035,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191035"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191035"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191042"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191035', 'OrderHeaderKey': '202502061340431030459', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1910,20250206191052,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191052"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191052"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191059"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191052', 'OrderHeaderKey': '202502061340591030541', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1911,20250206191100,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191100"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191100"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191100', 'OrderHeaderKey': '202502061341021030592', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1911,20250206191103,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191103"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191103"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191103', 'OrderHeaderKey': '202502061341051030630', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1913,20250206191314,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191314"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191314"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191314', 'OrderHeaderKey': '202502061343161030662', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1913,20250206191316,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191316"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" ShipNode=""103"">
+            <Item ItemID=""20250206191316"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191316', 'OrderHeaderKey': '202502061343191030694', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1913,20250206191319,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191319"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206191319"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191319', 'OrderHeaderKey': '202502061343211030729', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1913,20250206191322,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191322"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206191322"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191322', 'OrderHeaderKey': '202502061343241030767', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1913,20250206191324,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191324"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""10"" ShipNode=""1"">
+            <Item ItemID=""20250206191324"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""52789""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191324', 'OrderHeaderKey': '202502061343271030808', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1913,20250206191327,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191327"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191327"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191334"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191327', 'OrderHeaderKey': '202502061343341030848', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1913,20250206191335,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191335"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191335"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191342"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191335', 'OrderHeaderKey': '202502061343421030898', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1913,20250206191343,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191343"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191343"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191350"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191343', 'OrderHeaderKey': '202502061343501030957', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1913,20250206191350,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191350"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191350"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191357"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191350', 'OrderHeaderKey': '202502061343581031010', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1914,20250206191358,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191358"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191358"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191405"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191358', 'OrderHeaderKey': '202502061344051031069', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1914,20250206191406,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191406"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191406"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191406', 'OrderHeaderKey': '202502061344081031120', 'EnterpriseCode': 'Liverpool'}"
+Create Order with one line and 10 qty.Complete inventory is available at node 103.,20250206-1914,20250206191409,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:12:38-05:00"" OrderName=""83""
+    OrderNo=""20250206191409"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemID=""20250206191409"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""171.75""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoShipTo AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+    <PersonInfoContact AddressLine1=""ESTIBADORES"" AddressLine2=""84""
+        AddressLine3=""302"" AddressLine4=""ROSARIO 1 SECTOR CROC 2""
+        AddressLine5=""TLALNEPANTLA DE BAZ""
+        City=""ROSARIO 1 SECTOR CROC 2"" Country=""MX""
+        DayPhone=""5585703129"" EMailID=""ALEJANDRO-TORIZM@HOTMAIL.COM""
+        FirstName=""RICARDO TORIZ ARRIAGA"" LastName="""" State=""MEXICO"" ZipCode=""54090""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250206191409', 'OrderHeaderKey': '202502061344111031158', 'EnterpriseCode': 'Liverpool'}"

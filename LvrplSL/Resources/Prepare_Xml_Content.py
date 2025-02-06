@@ -144,8 +144,11 @@ def find_inventory_file_ml(folder_path):
     tpath = folder_path1 + '/Input/findInvInput.xml'
     with open(tpath) as fd:
         doc = fd.read()
-        dt1 = dt1func()
-        doc = doc.replace('$ItemID1', dt1)
+        item_ids = fetch_item_ids(folder_path)
+        item1 = item_ids[0]
+        item2 = item_ids[1]
+        doc = doc.replace('$ItemID1', item1)
+        doc = doc.replace('$ItemID2', item2)
     return doc
 
 def create_order_file(item_id,folder_path):
@@ -230,6 +233,28 @@ def somsns_input_file1(order_no, ItemID,folder_path):
     inner_contents = [inner_template.substitute(DocumentType=DocumentType, EnterpriseCode=EnterpriseCode,
                                                     ItemID=ItemID, OrderNo=OrderNo) for
                           (DocumentType, EnterpriseCode, ItemID, OrderNo) in data]
+    result = outer_template.substitute(document_list='\n'.join(inner_contents))
+    print(result)
+    with open(tpath, 'w', newline='') as fd:
+        fd.write(result)
+    return result
+
+def backorder_input_file1(order_no, ItemID,folder_path):
+    folder_path1 = "\\".join(folder_path.split("\\")[0:-1])
+    tpath = folder_path1 + '/Input/backorder.xml'
+    inner_template = string.Template(
+        '    <Reject  Cantidad="1.000" Descripcion="INVEN VAD por medio de la interfaz" Motivo="BOCE Mercancía Extraviada" Nodo="127" Odo="" Orden="${OrderNo}" Sku="${ItemID}" Usuario="ESANDOVAL"/>')
+    outer_template = string.Template("""
+        ${document_list}
+         """)
+        #<OrderStatusChange OrderNo="OtestItem9a">
+	#<OrderLines>
+		#<OrderLine ItemID="testItem9a" BaseDropStatus="CONF"/>
+	#</OrderLines>
+#</OrderStatusChange>
+    data = [(ItemID, order_no)]
+    inner_contents = [inner_template.substitute(ItemID=ItemID, OrderNo=OrderNo) for
+                          (ItemID, OrderNo) in data]
     result = outer_template.substitute(document_list='\n'.join(inner_contents))
     print(result)
     with open(tpath, 'w', newline='') as fd:

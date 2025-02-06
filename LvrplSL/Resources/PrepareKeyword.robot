@@ -9,11 +9,8 @@ Library    ../Resources/connectToDb.py
 Library           DateTime
 Library    XML
 Library    BuiltIn
-Library    JSONLibrary
-Library    Collections
 Library  DatabaseLibrary
 Library     ../Resources/read_write_all_excel.py
-Library    ../Resources/Prepare_Xml_Content.py
 
 *** Keywords ***
 Manage Item
@@ -27,6 +24,16 @@ Manage Item
          Log To Console    ${jsonItemId}[ItemList][Item][_ItemID]
          RETURN     ${jsonItemId}[ItemList][Item][_ItemID]
 
+Manage Item Multiline
+    [Arguments]         ${CUR_DIR}
+    ${manageItemJson}=     Manage Item With Dynamic Item ML       ${CUR_DIR}
+    ${manageItemResponse}=     Post On Session     AddData   ${base_url_api}${manageItem}     data=${manageItemJson}
+    status should be       204     ${manageItemResponse}
+    ${jsonItemId}=     Manage Item With Dynamic Item1    ${CUR_DIR}
+    Dictionary Should Contain Key     ${jsonItemId}     ItemList
+         ${Item_ID_Path}=    Get From Dictionary     ${jsonItemId}    ItemList
+         RETURN     ${Item_ID_Path}
+
 Get Item ID
     [Arguments]    ${json_data}    ${CUR_DIR}
   # Convert JSON string to dictionary using Evaluate and json.loads, and directly access the item ID
@@ -35,9 +42,24 @@ Get Item ID
     Log To Console    ${item_id}
     RETURN    ${item_id}
 
+Get Item ID ML
+    [Arguments]    ${json_data}    ${CUR_DIR}
+    Dictionary Should Contain Key     ${json_data}     Item
+    ${Item}=    Get From Dictionary     ${json_data}    Item
+    ${item_id1}=  Get From Dictionary  ${Item[0]}  _ItemID
+    ${item_id}=  Get From Dictionary  ${Item[1]}  _ItemID
+    Log To Console    ${Item_id}
+    RETURN     ${Item_id}
+
 Adjust Inventory
     [Arguments]    ${itemId}     ${CUR_DIR}
     ${adjInventoryJson} =    Adjust Inventory File    ${itemId}    ${CUR_DIR}
+    ${response} =    Post On Session    AddData    ${base_url_api}${adjustInventory}    data=${adjInventoryJson}    headers=${headers}
+    Status Should Be    204    ${response}
+
+Adjust Inventory Multiline
+    [Arguments]   ${CUR_DIR}
+    ${adjInventoryJson} =    Adjust Inventory File ML   ${CUR_DIR}
     ${response} =    Post On Session    AddData    ${base_url_api}${adjustInventory}    data=${adjInventoryJson}    headers=${headers}
     Status Should Be    204    ${response}
 
@@ -50,6 +72,14 @@ Release Order
     [Arguments]     ${AddData}     ${Order_No}     ${Order_Header_Key}     ${CUR_DIR}
     ${Order_No1}=    Release Input File1     ${Order_No}     ${Order_Header_Key}     ${CUR_DIR}
     ${response1}=     Post On Session     ${AddData}   ${base_url_api}${releaseOrder}     data=${Order_No1}    headers=${headers}
+
+BackOrder
+    [Arguments]     ${AddData}     ${Order_No}     ${values}     ${CUR_DIR}    ${flow_name}
+    ${ip_data}=    Backorder Input File1     ${Order_No}     ${values}     ${CUR_DIR}
+    ${response1}=     Post On Session     ${AddData}   ${base_url_flow}${flow_name}     data=${ip_data}    headers=${headers}
+    ${respSoms}=    convert to string   ${response1.json()}
+    Write Output File       ${respSoms}        ${SOMSNS}        ${CUR_DIR}
+
 
 SOMSNS Order
     [Arguments]     ${AddData}     ${Order_No}     ${values}     ${CUR_DIR}
@@ -90,9 +120,42 @@ Find Inventory
          ${ShipNode}  Get From Dictionary  ${assignmentList}  ShipNode
          Set Test Message    ShipNode 127 suggested in Assignment ShipNode from response is ${ShipNode}
 
+Find Inventory Multiline
+    [Arguments]    ${CUR_DIR}    ${scenario}
+    ${findInventoryJson} =    Find Inventory File Ml    ${CUR_DIR}
+    ${findInventoryResponse} =    Post On Session    AddData    ${base_url_flow}${EPLFindInventorySyncService}    data=${findInventoryJson}    headers=${headers}
+    ${resp}=    convert to string   ${findInventoryResponse.json()}
+    Write Output File       ${resp}        'findInv'    ${CUR_DIR}
+    Dictionary Should Contain Key     ${findInventoryResponse.json()}     SuggestedOption
+         ${Order_No}=    Get From Dictionary     ${findInventoryResponse.json()}    SuggestedOption
+         ${Option}  Get From Dictionary  ${Order_No}  Option
+          ${PromiseLines}  Get From Dictionary  ${Option}  PromiseLines
+         ${PromiseLine}  Get From Dictionary  ${PromiseLines}  PromiseLine
+          ${AssignmentsList}  Get From List  ${PromiseLine}  0
+          ${assignments}  Get From Dictionary  ${AssignmentsList}  Assignments
+          ${assignment}  Get From Dictionary  ${Assignments}  Assignment
+         ${assignmentList}  Get From List  ${assignment}  0
+         ${ShipNode}  Get From Dictionary  ${assignmentList}  ShipNode
+         Set Test Message    ShipNode 127 suggested in Assignment ShipNode from response is ${ShipNode}
+
 Create Order
     [Arguments]    ${itemId}     ${CUR_DIR}
      ${jsonCreateOrder}=     Create Order File      ${itemId}    ${CUR_DIR}
+    ${createOrderResponse}=     Post On Session     AddData   ${base_url_api}${createOrder}     data=${jsonCreateOrder}    headers=${headers}
+    ${resp2}=    convert to string   ${createOrderResponse.json()}
+    Write Output File       ${resp2}        'createOrder'        ${CUR_DIR}
+    Log To Console    ${createOrderResponse}
+    ${timestamp} =    Get Current Date    result_format=%Y%m%d-%H%M
+         Dictionary Should Contain Key     ${createOrderResponse.json()}     OrderNo
+         ${Order_No}=    Get From Dictionary     ${createOrderResponse.json()}    OrderNo
+         Dictionary Should Contain Key     ${createOrderResponse.json()}     OrderHeaderKey
+         ${Order_Header_Key}=    Get From Dictionary     ${createOrderResponse.json()}    OrderHeaderKey
+         Append Excel File1  ${file}    ${Order_No}     ${TEST NAME}    ${timestamp}    ${jsonCreateOrder}     ${createOrderResponse.json()}
+         RETURN    ${Order_No}    ${Order_Header_Key}
+
+Create Order Multiline
+    [Arguments]   ${CUR_DIR}
+     ${jsonCreateOrder}=     Create Order File ML   ${CUR_DIR}
     ${createOrderResponse}=     Post On Session     AddData   ${base_url_api}${createOrder}     data=${jsonCreateOrder}    headers=${headers}
     ${resp2}=    convert to string   ${createOrderResponse.json()}
     Write Output File       ${resp2}        'createOrder'        ${CUR_DIR}

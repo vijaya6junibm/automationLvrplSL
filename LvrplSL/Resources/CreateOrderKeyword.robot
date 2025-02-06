@@ -41,6 +41,8 @@ ${ePLGetFlashStoreListSyncService}             EPLGetFlashStoreListSyncService
 ${ePLDeleteFlashStoreSyncService}                EPLDeleteFlashStoreSyncService
 ${EPLFlashStoreLoadSyncService}                EPLFlashStoreLoadSyncService
 ${EPLManageDistRuleSyncService}                EPLManageDistRuleSyncService
+${EPLPusblishToBackorderEWMQ}                EPLPusblishToBackorderEWMQ
+${EPLPublishToBackorderAppSurtidoQ}                EPLPublishToBackorderAppSurtidoQ
 
 
 *** Keywords ***
