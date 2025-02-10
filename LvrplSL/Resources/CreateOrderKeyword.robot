@@ -3,6 +3,10 @@ Library       Collections
 Library       RequestsLibrary
 Library     ../Resources/Create_Order_Xml_Content.py
 Library      JSONLibrary
+Library      ../Resources/read_write_all_excel.py
+Library      ../Resources/Prepare_Xml_Content.py
+Library           DateTime
+Library              OperatingSystem
 
 *** Variables ***
 ${base_url_api}         http://localhost:9080/smcfs/restapi/invoke/
@@ -46,27 +50,17 @@ ${EPLPublishToBackorderAppSurtidoQ}                EPLPublishToBackorderAppSurti
 
 
 *** Keywords ***
-Sequence Create Order POS TC001 Seq1
-    ${jsonbody}=     Create Order        ${dirpath}       ${TC001_Path}
-    RETURN  ${jsonbody}
-
-Sequence Create Order OOM TC001 Seq1
-    ${jsonbody}=     Create Order With Dynamic Item    ${dirpath1}       ${TC001_Manage_Item_Path}
-    RETURN  ${jsonbody}
-
-Sequence Create Order Tests TC001 Seq1             ${it}
-    ${jsonbody}=     Create Order        ${dirpath1}       ${TC001_Manage_Item_Path}        ${it}
-    RETURN  ${jsonbody}
-
-TC_003_CreateOrderApp - create normal order
-    ${jsonbody}=     Create Order        ${dirpath}       ${TC003_Path}
-    RETURN  ${jsonbody}
-
-TC_004_CreateOrderApp - create normal order ClickandCollect
-    ${jsonbody}=     Create Order        ${dirpath}       ${TC004_Path}
-    RETURN  ${jsonbody}
-
-Sequence Manage Item TC001 Seq1
-    ${jsonbody}=     Manage Item        ${dirpath1}       ${TC001_Manage_Item_Path}
-    RETURN  ${jsonbody}
+Create Order SL
+    [Arguments]         ${jsonItemId}    ${CUR_DIR}
+    ${jsonCreateOrder}=     Create Order File      ${jsonItemId}[ItemList][Item][_ItemID]    ${CUR_DIR}
+    ${createOrderResponse}=     Post On Session     AddData   ${base_url_api}${createOrder}     data=${jsonCreateOrder}    headers=${headers}
+    ${resp2}=    convert to string   ${createOrderResponse.json()}
+    Write Output File       ${resp2}        'createOrder'        ${CUR_DIR}
+    ${timestamp} =    Get Current Date    result_format=%Y%m%d-%H%M
+         Dictionary Should Contain Key     ${createOrderResponse.json()}     OrderNo
+         ${Order_No}=    Get From Dictionary     ${createOrderResponse.json()}    OrderNo
+         Dictionary Should Contain Key     ${createOrderResponse.json()}     OrderHeaderKey
+         ${Order_Header_Key}=    Get From Dictionary     ${createOrderResponse.json()}    OrderHeaderKey
+         Append Excel File1  ${file}    ${Order_No}     ${TEST NAME}    ${timestamp}    ${jsonCreateOrder}     ${createOrderResponse.json()}
+    
 

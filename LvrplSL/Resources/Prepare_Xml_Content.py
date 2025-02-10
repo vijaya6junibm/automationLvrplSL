@@ -40,7 +40,7 @@ def manage_item_with_dynamic_item(folder_path):
     tpath = folder_path1 + '/Input/manageItemInput.xml'
     with open(tpath) as fd:
         doc = fd.read()
-        dt = datetime.today().strftime('%Y%m%d%H%M%S')
+        dt = datetime.today().strftime('%Y%m%d%H%M%S')+ str(int(time.time() * 1000) % 1000)
         print('before mod', doc)
         doc = doc.replace('$ItemID', dt)
         tdirpath = folder_path1 + '/Input/manageItemInputWithItemId.xml'
